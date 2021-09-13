@@ -15,10 +15,9 @@ namespace MassageStudioWebApi.Models
         [Required]
         public DateTime ReservationDateTime { get; set; }
 
-        
-        public Client ReservationClient { get; set; }
-
-        
-        public Мasseur ReservationМasseur { get; set; }
+        [Required]
+        public Client ReservationClient { get; set; }        
+        [Required]        
+        public Masseur ReservationМasseur { get; set; }
     }
 }

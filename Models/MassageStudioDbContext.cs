@@ -15,6 +15,6 @@ namespace MassageStudioWebApi.Models
         }
         public DbSet<Reservation> Reservations { get; set; }
         public DbSet<Client> Clients { get; set; }
-        public DbSet<Мasseur> Мasseurs { get; set; }        
+        public DbSet<Masseur> Мasseurs { get; set; }        
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace MassageStudioWebApi.Models
 {
-    public class Мasseur
+    public class Masseur
     {
         [Key]
         [Required]
