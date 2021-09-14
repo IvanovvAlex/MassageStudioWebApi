@@ -27,21 +27,20 @@ namespace MassageStudioWebApi.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<Reservation>> GetReservations(Guid id)
+        public async Task<ActionResult<Reservation>> GetReservations(int id)
         {
             return await _reservationRepository.Get(id);
         }
 
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservations([FromBody] Reservation reservation)
-        {            
-            reservation.ReservationId = new Guid();           
+        {                                   
             var newReservation = await _reservationRepository.Create(reservation);
             return CreatedAtAction(nameof(GetReservations), new { id = newReservation.ReservationId }, newReservation);
         }
 
         [HttpPut]
-        public async Task<ActionResult> PutReservations(Guid id, [FromBody] Reservation reservation)
+        public async Task<ActionResult> PutReservations(int id, [FromBody] Reservation reservation)
         {
             if (id != reservation.ReservationId)
             {
@@ -54,7 +53,7 @@ namespace MassageStudioWebApi.Controllers
         }
 
         [HttpDelete("{id}")]
-        public async Task<ActionResult> Delete(Guid id)
+        public async Task<ActionResult> Delete(int id)
         {
             var reservationToDelete = await _reservationRepository.Get(id);
 

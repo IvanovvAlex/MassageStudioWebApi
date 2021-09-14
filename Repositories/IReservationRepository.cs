@@ -9,10 +9,10 @@ namespace MassageStudioWebApi.Repositories
     public interface IReservationRepository
     {
         Task<IEnumerable<Reservation>> Get();
-        Task<Reservation> Get(Guid id);
+        Task<Reservation> Get(int id);
         Task<Reservation> Create(Reservation reservation);
         Task Update(Reservation reservation);
-        Task Delete(Guid id);
+        Task Delete(int id);
 
     }
 }

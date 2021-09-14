@@ -30,7 +30,7 @@ namespace MassageStudioWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IReservationRepository, ReservationRepository>();
-            services.AddDbContext<MassageStudioDbContext>(o => o.UseSqlite("Data source=MassageStudio.db"));
+            services.AddDbContext<MassageStudioDbContext>(o => o.UseSqlServer("Server=.;Database=MassageStudioDb;Integrated Security=True"));
 
             services.AddControllers();
             services.AddSwaggerGen(c =>

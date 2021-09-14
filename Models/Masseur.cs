@@ -8,14 +8,18 @@ namespace MassageStudioWebApi.Models
 {
     public class Masseur
     {
+        public Masseur()
+        {
+            MasseurReservations = new HashSet<Reservation>();
+        }
         [Key]
         [Required]
-        public Guid MasseurId { get; set; }
+        public int MasseurId { get; set; }
 
         [Required]
         public string MasseurName { get; set; }
 
-        [Required]
-        public IList<Reservation> MasseurReservations { get; set; }
+        
+        public ICollection<Reservation> MasseurReservations { get; set; }
     }
 }

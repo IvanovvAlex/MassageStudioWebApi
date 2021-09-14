@@ -1,3 +1,4 @@
+using MassageStudioWebApi.Models;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
@@ -13,6 +14,9 @@ namespace MassageStudioWebApi
     {
         public static void Main(string[] args)
         {
+            //var c = new MassageStudioDbContext();
+            //c.Database.EnsureDeleted();
+            //c.Database.EnsureCreated();
             CreateHostBuilder(args).Build().Run();
         }
 

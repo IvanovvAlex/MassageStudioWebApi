@@ -17,13 +17,14 @@ namespace MassageStudioWebApi.Repositories
         }
         public async Task<Reservation> Create(Reservation reservation)
         {
+            
             _context.Reservations.Add(reservation);
             await _context.SaveChangesAsync();
 
             return reservation;
         }
 
-        public async Task Delete(Guid id)
+        public async Task Delete(int id)
         {
             var ReservationToDelete = await _context.Reservations.FindAsync(id);
             _context.Reservations.Remove(ReservationToDelete);
@@ -35,7 +36,7 @@ namespace MassageStudioWebApi.Repositories
             return await _context.Reservations.ToListAsync();
         }
 
-        public async Task<Reservation> Get(Guid id)
+        public async Task<Reservation> Get(int id)
         {
             return await _context.Reservations.FindAsync(id);
         }

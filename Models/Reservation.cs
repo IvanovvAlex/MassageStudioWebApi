@@ -10,14 +10,19 @@ namespace MassageStudioWebApi.Models
     {
         [Key]
         [Required]
-        public Guid ReservationId { get; set; }
+        public int ReservationId { get; set; }
 
         [Required]
         public DateTime ReservationDateTime { get; set; }
 
         [Required]
-        public Client ReservationClient { get; set; }        
-        [Required]        
-        public Masseur ReservationМasseur { get; set; }
+        public int ClientId { get; set; }
+        [Required]
+        public Client Client { get; set; }
+
+        [Required]
+        public int МasseurId { get; set; }
+        [Required]
+        public Masseur Мasseur { get; set; }
     }
 }
