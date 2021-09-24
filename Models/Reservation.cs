@@ -22,13 +22,13 @@ namespace MassageStudioWebApi.Models
         [Required]
         public Guid ClientId { get; set; }
 
-        //[Required]
-        //public Client Client { get; set; }
+        [Required]
+        public Client Client { get; set; }
 
         [Required]
         public Guid МasseurId { get; set; }
 
-        //[Required]
-        //public Masseur Мasseur { get; set; }
+        [Required]
+        public Masseur Мasseur { get; set; }
     }
 }

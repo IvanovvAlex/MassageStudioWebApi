@@ -11,7 +11,7 @@ namespace MassageStudioWebApi.Models
         public Masseur()
         {
             MasseurId = new Guid();
-            MasseurReservations = new HashSet<Reservation>();
+            //MasseurReservations = new HashSet<Reservation>();
         }
         [Key]
         [Required]
@@ -20,7 +20,7 @@ namespace MassageStudioWebApi.Models
         [Required]
         public string MasseurName { get; set; }
 
-        [Required]
-        public ICollection<Reservation> MasseurReservations { get; set; }
+        //[Required]
+        //public ICollection<Reservation> MasseurReservations { get; set; }
     }
 }

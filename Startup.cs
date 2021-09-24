@@ -30,6 +30,8 @@ namespace MassageStudioWebApi
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IReservationRepository, ReservationRepository>();
+            services.AddScoped<IClientRepository, ClientRepository>();
+            services.AddScoped<IMasseurRepository, MasseurRepository>();
             services.AddDbContext<MassageStudioDbContext>(o => o.UseSqlServer("Server=.;Database=MassageStudioDb;Integrated Security=True"));
 
             services.AddControllers();

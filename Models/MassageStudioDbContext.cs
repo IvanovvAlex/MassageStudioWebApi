@@ -24,8 +24,8 @@ namespace MassageStudioWebApi.Models
 
         protected override void OnModelCreating(ModelBuilder modelbuilder)
         {
-            //modelbuilder.Entity<Reservation>().HasOne(x => x.Client).WithMany(x => x.ClientReservations);
-            //modelbuilder.Entity<Reservation>().HasOne(x => x.Мasseur).WithMany(x => x.MasseurReservations);            
+            modelbuilder.Entity<Reservation>().HasOne(x => x.Client)/*.WithMany(x => x.ClientReservations)*/;
+            modelbuilder.Entity<Reservation>().HasOne(x => x.Мasseur)/*.WithMany(x => x.MasseurReservations)*/;
 
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)

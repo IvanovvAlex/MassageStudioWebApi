@@ -14,10 +14,10 @@ namespace MassageStudioWebApi
     {
         public static void Main(string[] args)
         {
-            //var c = new MassageStudioDbContext();
-            //c.Database.EnsureDeleted();
-            //c.Database.EnsureCreated();
-            CreateHostBuilder(args).Build().Run();
+            var c = new MassageStudioDbContext();
+            c.Database.EnsureDeleted();
+            c.Database.EnsureCreated();
+            //CreateHostBuilder(args).Build().Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
