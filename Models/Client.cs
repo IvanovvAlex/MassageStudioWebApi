@@ -10,16 +10,17 @@ namespace MassageStudioWebApi.Models
     {
         public Client()
         {
+            ClientId = new Guid();
             ClientReservations = new HashSet<Reservation>();
         }
         [Key]
         [Required]
-        public int ClientId { get; set; }
+        public Guid ClientId { get; set; }
 
         [Required]
         public string ClientName { get; set; }
 
-        
+        [Required]
         public ICollection<Reservation> ClientReservations { get; set; }
     }
 }

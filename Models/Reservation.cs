@@ -8,21 +8,27 @@ namespace MassageStudioWebApi.Models
 {
     public class Reservation
     {
+        public Reservation()
+        {
+            ReservationId = new Guid();
+        }
         [Key]
         [Required]
-        public int ReservationId { get; set; }
+        public Guid ReservationId { get; set; }
 
         [Required]
         public DateTime ReservationDateTime { get; set; }
 
         [Required]
-        public int ClientId { get; set; }
-        [Required]
-        public Client Client { get; set; }
+        public Guid ClientId { get; set; }
+
+        //[Required]
+        //public Client Client { get; set; }
 
         [Required]
-        public int МasseurId { get; set; }
-        [Required]
-        public Masseur Мasseur { get; set; }
+        public Guid МasseurId { get; set; }
+
+        //[Required]
+        //public Masseur Мasseur { get; set; }
     }
 }
