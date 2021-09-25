@@ -7,20 +7,12 @@ using System.Threading.Tasks;
 namespace MassageStudioWebApi.Models
 {
     public class Masseur
-    {
-        public Masseur()
-        {
-            MasseurId = new Guid();
-            //MasseurReservations = new HashSet<Reservation>();
-        }
+    {        
         [Key]
-        [Required]
+        [Required]        
         public Guid MasseurId { get; set; }
 
         [Required]
         public string MasseurName { get; set; }
-
-        //[Required]
-        //public ICollection<Reservation> MasseurReservations { get; set; }
     }
 }

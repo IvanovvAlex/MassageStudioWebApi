@@ -34,7 +34,9 @@ namespace MassageStudioWebApi.Controllers
 
         [HttpPost]
         public async Task<ActionResult<Reservation>> PostReservations([FromBody] Reservation reservation)
-        {                                   
+        {
+            //reservation.ReservationId =  Guid.NewGuid();
+            
             var newReservation = await _reservationRepository.Create(reservation);
             return CreatedAtAction(nameof(GetReservations), new { id = newReservation.ReservationId }, newReservation);
         }

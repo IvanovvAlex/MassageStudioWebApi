@@ -22,12 +22,12 @@ namespace MassageStudioWebApi.Models
         public DbSet<Client> Clients { get; set; }
         public DbSet<Masseur> Masseurs { get; set; }
 
-        protected override void OnModelCreating(ModelBuilder modelbuilder)
-        {
-            modelbuilder.Entity<Reservation>().HasOne(x => x.Client)/*.WithMany(x => x.ClientReservations)*/;
-            modelbuilder.Entity<Reservation>().HasOne(x => x.Мasseur)/*.WithMany(x => x.MasseurReservations)*/;
+        //protected override void OnModelCreating(ModelBuilder modelbuilder)
+        //{
+        //    modelbuilder.Entity<Reservation>().HasOne(x => x.Client)/*.WithMany(x => x.ClientReservations)*/;
+        //    modelbuilder.Entity<Reservation>().HasOne(x => x.Masseur)/*.WithMany(x => x.MasseurReservations)*/;
 
-        }
+        //}
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             if (!optionsBuilder.IsConfigured)

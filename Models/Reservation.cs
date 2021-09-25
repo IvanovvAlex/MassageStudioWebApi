@@ -7,11 +7,7 @@ using System.Threading.Tasks;
 namespace MassageStudioWebApi.Models
 {
     public class Reservation
-    {
-        public Reservation()
-        {
-            ReservationId = new Guid();
-        }
+    {      
         [Key]
         [Required]
         public Guid ReservationId { get; set; }
@@ -20,15 +16,9 @@ namespace MassageStudioWebApi.Models
         public DateTime ReservationDateTime { get; set; }
 
         [Required]
-        public Guid ClientId { get; set; }
+        public Guid ClientId { get; set; }      
 
         [Required]
-        public Client Client { get; set; }
-
-        [Required]
-        public Guid МasseurId { get; set; }
-
-        [Required]
-        public Masseur Мasseur { get; set; }
+        public Guid MasseurId { get; set; }      
     }
 }
